@@ -11,6 +11,6 @@
   },
   "welcome_message": "\nWelcome! This will create a Databricks Asset Bundle project.",
   "success_message": "\nYour bundle '{{.project_name}}' has been created.",
-  "min_databricks_cli_version": "0.240.0",
-  "version": "1"
+  "min_databricks_cli_version": "v0.240.0",
+  "version": 1
 }
