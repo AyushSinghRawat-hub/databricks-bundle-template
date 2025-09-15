@@ -1,0 +1,15 @@
+# Job: Bootstrap inbox/outbox tables for async flow
+resources:
+  jobs:
+    job_bootstrap:
+      name: {{.project_name}}_job_bootstrap
+      tasks:
+        - task_key: bootstrap_tables
+          spark_python_task:
+            python_file: ../src/agent/bootstrap_tables.py
+          job_cluster_key: job_cluster
+      job_clusters:
+        - job_cluster_key: job_cluster
+          new_cluster:
+            node_type_id: i3.xlarge
+            spark_version: 13.3.x-scala2.12
